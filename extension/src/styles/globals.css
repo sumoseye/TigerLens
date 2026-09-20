@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    background-color: #2a1810;
+    color: #faf6ee;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #2a1810;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #5e3d2e;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #6f4e3d;
+  }
+}
+
+@layer components {
+  .card-chocolate {
+    @apply bg-chocolate-100 border border-chocolate-400 rounded-xl p-4 shadow-lg;
+  }
+
+  .btn-butter {
+    @apply bg-butter-yellow text-butter-yellow-dark font-semibold px-4 py-2 rounded-lg
+      hover:bg-butter-yellow-300 active:bg-butter-yellow-400
+      transition-all duration-150 ease-in-out
+      shadow-md hover:shadow-lg;
+  }
+
+  .btn-ice {
+    @apply bg-ice-blue-200 text-chocolate font-semibold px-4 py-2 rounded-lg
+      hover:bg-ice-blue-300 active:bg-ice-blue-400
+      transition-all duration-150 ease-in-out;
+  }
+
+  .badge-butter {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium
+      bg-butter-yellow-300 text-butter-yellow-dark;
+  }
+
+  .badge-ice {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium
+      bg-ice-blue-200 text-chocolate;
+  }
+
+  .input-dark {
+    @apply w-full bg-chocolate-200 border border-chocolate-400 rounded-lg px-4 py-2.5
+      text-cream placeholder-chocolate-500 
+      focus:outline-none focus:ring-2 focus:ring-butter-yellow-300 focus:border-transparent
+      transition-all duration-150;
+  }
+}
