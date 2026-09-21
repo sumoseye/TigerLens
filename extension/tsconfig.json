@@ -1,13 +1,21 @@
 {
-  "extends": "plasmo/templates/tsconfig.base",
   "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./src/*"]
-    },
-    "jsx": "react-jsx",
-    "strict": true
+      "~/*": [
+        "./src/*"
+      ]
+    }
   },
-  "include": ["./**/*.ts", "./**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    ".plasmo/index.d.ts",
+    "./src/**/*",
+    "./*.d.ts"
+  ]
 }
